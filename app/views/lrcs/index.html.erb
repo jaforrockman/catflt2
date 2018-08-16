@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lrcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bd</th>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Trade</th>
+      <th>Closed</th>
+      <th>Issued</th>
+      <th>Iv no</th>
+      <th>Reg sl</th>
+      <th>Self</th>
+      <th>Wife</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lrcs.each do |lrc| %>
+      <tr>
+        <td><%= lrc.bd %></td>
+        <td><%= lrc.rank %></td>
+        <td><%= lrc.name %></td>
+        <td><%= lrc.trade %></td>
+        <td><%= lrc.closed %></td>
+        <td><%= lrc.issued %></td>
+        <td><%= lrc.iv_no %></td>
+        <td><%= lrc.reg_sl %></td>
+        <td><%= lrc.self %></td>
+        <td><%= lrc.wife %></td>
+        <td><%= link_to 'Show', lrc %></td>
+        <td><%= link_to 'Edit', edit_lrc_path(lrc) %></td>
+        <td><%= link_to 'Destroy', lrc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lrc', new_lrc_path %>

@@ -1,0 +1,2 @@
+class Lrc < ApplicationRecord
+end

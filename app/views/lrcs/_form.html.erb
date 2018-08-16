@@ -1,0 +1,67 @@
+<%= form_with(model: lrc, local: true) do |form| %>
+  <% if lrc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lrc.errors.count, "error") %> prohibited this lrc from being saved:</h2>
+
+      <ul>
+      <% lrc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bd %>
+    <%= form.text_field :bd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank %>
+    <%= form.text_field :rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trade %>
+    <%= form.text_field :trade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :closed %>
+    <%= form.date_select :closed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issued %>
+    <%= form.date_select :issued %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iv_no %>
+    <%= form.text_field :iv_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reg_sl %>
+    <%= form.text_field :reg_sl %>
+  </div>
+
+  <div class="field">
+    <%= form.label :self %>
+    <%= form.text_field :self %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wife %>
+    <%= form.text_field :wife %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

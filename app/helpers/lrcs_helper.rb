@@ -1,0 +1,2 @@
+module LrcsHelper
+end

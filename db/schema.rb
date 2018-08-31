@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_16_081535) do
+ActiveRecord::Schema.define(version: 2018_08_31_115015) do
+
+  create_table "bazes", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "lrcs", force: :cascade do |t|
     t.decimal "bd"
@@ -23,6 +29,45 @@ ActiveRecord::Schema.define(version: 2018_08_16_081535) do
     t.decimal "reg_sl"
     t.decimal "self"
     t.decimal "wife"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.decimal "bd"
+    t.string "rank"
+    t.string "name"
+    t.string "trade"
+    t.string "section"
+    t.string "base"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ranks", force: :cascade do |t|
+    t.decimal "sl_no"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trades", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wives", force: :cascade do |t|
+    t.string "person_bd"
+    t.string "name"
+    t.date "dob"
+    t.date "dom"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

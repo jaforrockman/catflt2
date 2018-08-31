@@ -1,0 +1,52 @@
+<%= form_with(model: person, local: true) do |form| %>
+  <% if person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bd %>
+    <%= form.text_field :bd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank %>
+    
+    <%= form.collection_select :rank, Rank.order(:title),:id,:title, include_blank: true %>
+    <p> Not Listed? <%= link_to "Add One", new_rank_path %></p>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trade %>
+     <%= form.collection_select :trade, Trade.order(:title),:id,:title, include_blank: true %>
+    <p> Not Listed? <%= link_to "Add One", new_trade_path %></p>
+  </div>
+
+  <div class="field">
+    <%= form.label :section %>
+    <%= form.collection_select :section, Section.order(:title),:id,:title, include_blank: true %>
+    <p> Not Listed? <%= link_to "Add One", new_section_path %></p>
+  </div>
+
+  <div class="field">
+    <%= form.label :base %>
+    <%= form.collection_select :base, Baze.order(:title),:id,:title, include_blank: true %>
+    <p> Not Listed? <%= link_to "Add One", new_baze_path %></p>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

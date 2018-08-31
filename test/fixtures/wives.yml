@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person_bd: MyString
+  name: MyString
+  dob: 2018-08-31
+  dom: 2018-08-31
+
+two:
+  person_bd: MyString
+  name: MyString
+  dob: 2018-08-31
+  dom: 2018-08-31

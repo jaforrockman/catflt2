@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bd: 9.99
+  rank: MyString
+  name: MyString
+  trade: MyString
+  section: MyString
+  base: MyString
+
+two:
+  bd: 9.99
+  rank: MyString
+  name: MyString
+  trade: MyString
+  section: MyString
+  base: MyString

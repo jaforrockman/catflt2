@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Person bd:</strong>
+  <%= @wife.person_bd %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wife.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @wife.dob %>
+</p>
+
+<p>
+  <strong>Dom:</strong>
+  <%= @wife.dom %>
+</p>
+
+<%= link_to 'Edit', edit_wife_path(@wife) %> |
+<%= link_to 'Back', wives_path %>

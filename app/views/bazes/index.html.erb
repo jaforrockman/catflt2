@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bazes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bazes.each do |baze| %>
+      <tr>
+        <td><%= baze.title %></td>
+        <td><%= link_to 'Show', baze %></td>
+        <td><%= link_to 'Edit', edit_baze_path(baze) %></td>
+        <td><%= link_to 'Destroy', baze, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Baze', new_baze_path %>

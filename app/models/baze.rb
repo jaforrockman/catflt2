@@ -1,0 +1,2 @@
+class Baze < ApplicationRecord
+end

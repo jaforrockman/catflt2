@@ -11,54 +11,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :bd %>
-    <%= form.text_field :bd %>
+  <div class="form-group">
+    <%= form.text_field :bd ,class: "form-control" , placeholder: "Enter BD No"%>
   </div>
 
-  <div class="field">
-    <%= form.label :rank %>
-    <%= form.text_field :rank %>
+  <div class="form-group">
+   
+    <%= form.text_field :rank ,class: "form-control" , placeholder: "Rank"%>
   </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+  
+    <%= form.text_field :name ,class: "form-control" , placeholder: "Name"%>
   </div>
 
-  <div class="field">
-    <%= form.label :trade %>
-    <%= form.text_field :trade %>
+  <div class="form-group">
+  
+    <%= form.text_field :trade,class: "form-control" , placeholder: "Trade" %>
   </div>
 
-  <div class="field">
-    <%= form.label :closed %>
-    <%= form.date_select :closed %>
+  <div class="form-group">
+    <%= form.text_field :closed, :class => 'datepicker', data: { date_format: 'dd/mm/yyyy' }, placeholder: "Card Closed on" %>  
   </div>
 
-  <div class="field">
-    <%= form.label :issued %>
-    <%= form.date_select :issued %>
+  <div class="form-group">
+  <%= form.text_field :issued, :class => 'datepicker2', data: { date_format: 'dd/mm/yyyy' }, placeholder: "Ration Issued Up To Month"%>
+ </div>
+
+  <div class="form-group">
+   
+    <%= form.text_field :iv_no ,class: "form-control" , placeholder: "IV No"%>
   </div>
 
-  <div class="field">
-    <%= form.label :iv_no %>
-    <%= form.text_field :iv_no %>
+  <div class="form-group">
+    
+    <%= form.text_field :reg_sl ,class: "form-control" , placeholder: "Reister SL Number"%>
   </div>
 
-  <div class="field">
-    <%= form.label :reg_sl %>
-    <%= form.text_field :reg_sl %>
+  <div class="form-group">
+   
+    <%= form.text_field :self ,class: "form-control" , placeholder: "Self"%>
   </div>
 
-  <div class="field">
-    <%= form.label :self %>
-    <%= form.text_field :self %>
-  </div>
-
-  <div class="field">
-    <%= form.label :wife %>
-    <%= form.text_field :wife %>
+  <div class="form-group">
+   
+    <%= form.text_field :wife ,class: "form-control" , placeholder: "Wife" %>
   </div>
 
   <div class="actions">

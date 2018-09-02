@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :children
   resources :wives
+  resources :wives 
   resources :bazes
   resources :bases
   resources :sections

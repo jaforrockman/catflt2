@@ -17,7 +17,7 @@ class WivesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create wife" do
     assert_difference('Wife.count') do
-      post wives_url, params: { wife: { dob: @wife.dob, dom: @wife.dom, name: @wife.name, person_bd: @wife.person_bd } }
+      post wives_url, params: { wife: { dob: @wife.dob, dom: @wife.dom, name: @wife.name, person_id: @wife.person_id } }
     end
 
     assert_redirected_to wife_url(Wife.last)
@@ -34,7 +34,7 @@ class WivesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update wife" do
-    patch wife_url(@wife), params: { wife: { dob: @wife.dob, dom: @wife.dom, name: @wife.name, person_bd: @wife.person_bd } }
+    patch wife_url(@wife), params: { wife: { dob: @wife.dob, dom: @wife.dom, name: @wife.name, person_id: @wife.person_id } }
     assert_redirected_to wife_url(@wife)
   end
 

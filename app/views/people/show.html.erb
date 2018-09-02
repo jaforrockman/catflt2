@@ -2,7 +2,7 @@
 
 <p>
   <strong>Bd:</strong>
-  <%= @person.bd %>
+  <%= @person.bd.round %>
 </p>
 
 <p>
@@ -35,7 +35,40 @@
 
 <hr>
 
-<%= %>
+<p>Wife</p>
+<% if Wife.find_by_person_bd(@person.bd).present? %>
+<%= Wife.find_by_person_bd(@person.bd).name %>
+<%else%>
+<p>not married yet  | Married Recentyly Please <%= link_to "add", new_wife_path%> Wifes details</p> 
+<%end%>
+
+<br>
+
+<p>Children</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# if @children.present? %>
+  <%#@children.each do |child| %>
+  
+    Name: <%#= child.name %>|Dob : <%#= child.dob %>| age:<%#=((Time.zone.now - child.dob.to_time) / 1.year.seconds).floor %> Years
+  <%#end%>
+<%#else%>
+<p>No child yet  | Born Recentyly Please <%#= link_to "add", new_child_path%> childs details</p> 
+<%#end%>
+
+<br>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

@@ -69,6 +69,6 @@ class WivesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wife_params
-      params.require(:wife).permit(:person_bd, :name, :dob, :dom)
+      params.require(:wife).permit(:person_id, :name, :dob, :dom)
     end
 end

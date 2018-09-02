@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :person_bd %>
-    <%= form.text_field :person_bd %>
+    <%= form.label :person_id %>
+   <%= collection_select(:wife, :person_id, Person.all, :id, :bd, {:prompt => true, :multiple=>true }, id:"simple-example" )%>
   </div>
 
   <div class="field">

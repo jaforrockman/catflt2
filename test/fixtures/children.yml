@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  person_id: MyString
+  fathers_id: MyString
   name: MyString
   dob: 2018-09-02
-  dom: 2018-09-02
 
 two:
-  person_id: MyString
+  fathers_id: MyString
   name: MyString
   dob: 2018-09-02
-  dom: 2018-09-02

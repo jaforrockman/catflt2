@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require select2
 //= require activestorage
 //= require bootstrap-datepicker
 //= require bootstrap

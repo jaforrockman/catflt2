@@ -5,11 +5,14 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
+   # @children=Child.find_by_fathers_bd(@person_bd).all
+    
   end
 
   # GET /people/1
   # GET /people/1.json
   def show
+        
   end
 
   # GET /people/new

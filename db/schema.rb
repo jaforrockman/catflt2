@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_31_115015) do
+ActiveRecord::Schema.define(version: 2018_09_02_174937) do
 
   create_table "bazes", force: :cascade do |t|
     t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.string "fathers_id"
+    t.string "name"
+    t.date "dob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,7 +72,7 @@ ActiveRecord::Schema.define(version: 2018_08_31_115015) do
   end
 
   create_table "wives", force: :cascade do |t|
-    t.string "person_bd"
+    t.string "person_id"
     t.string "name"
     t.date "dob"
     t.date "dom"

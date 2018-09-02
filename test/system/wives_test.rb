@@ -17,7 +17,7 @@ class WivesTest < ApplicationSystemTestCase
     fill_in "Dob", with: @wife.dob
     fill_in "Dom", with: @wife.dom
     fill_in "Name", with: @wife.name
-    fill_in "Person Bd", with: @wife.person_bd
+    fill_in "Person", with: @wife.person_id
     click_on "Create Wife"
 
     assert_text "Wife was successfully created"
@@ -31,7 +31,7 @@ class WivesTest < ApplicationSystemTestCase
     fill_in "Dob", with: @wife.dob
     fill_in "Dom", with: @wife.dom
     fill_in "Name", with: @wife.name
-    fill_in "Person Bd", with: @wife.person_bd
+    fill_in "Person", with: @wife.person_id
     click_on "Update Wife"
 
     assert_text "Wife was successfully updated"

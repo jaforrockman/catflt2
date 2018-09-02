@@ -36,8 +36,8 @@
 <hr>
 
 <p>Wife</p>
-<% if Wife.find_by_person_bd(@person.bd).present? %>
-<%= Wife.find_by_person_bd(@person.bd).name %>
+<% if @person.wife.present? %>
+<%= @person.wife.name %>
 <%else%>
 <p>not married yet  | Married Recentyly Please <%= link_to "add", new_wife_path%> Wifes details</p> 
 <%end%>
@@ -46,26 +46,18 @@
 
 <p>Children</p>
 
+<% if @person.children.any?%>
+  <%@person.children.each do |child|%>
+  <%= child.name%>
+  <%=child.dob%>
+  <br>
+  <% end%>
+  <% else%>
+  <p>No child yet. Born a new one add </p>
+
+  <% end%>
 
 
-
-
-
-
-
-
-
-
-
-
-<%# if @children.present? %>
-  <%#@children.each do |child| %>
-  
-    Name: <%#= child.name %>|Dob : <%#= child.dob %>| age:<%#=((Time.zone.now - child.dob.to_time) / 1.year.seconds).floor %> Years
-  <%#end%>
-<%#else%>
-<p>No child yet  | Born Recentyly Please <%#= link_to "add", new_child_path%> childs details</p> 
-<%#end%>
 
 <br>
 

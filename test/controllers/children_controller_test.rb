@@ -17,7 +17,7 @@ class ChildrenControllerTest < ActionDispatch::IntegrationTest
 
   test "should create child" do
     assert_difference('Child.count') do
-      post children_url, params: { child: { dob: @child.dob, fathers_id: @child.fathers_id, name: @child.name } }
+      post children_url, params: { child: { dob: @child.dob, name: @child.name, person_id: @child.person_id } }
     end
 
     assert_redirected_to child_url(Child.last)
@@ -34,7 +34,7 @@ class ChildrenControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update child" do
-    patch child_url(@child), params: { child: { dob: @child.dob, fathers_id: @child.fathers_id, name: @child.name } }
+    patch child_url(@child), params: { child: { dob: @child.dob, name: @child.name, person_id: @child.person_id } }
     assert_redirected_to child_url(@child)
   end
 

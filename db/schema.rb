@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_02_174937) do
+ActiveRecord::Schema.define(version: 2018_09_02_182929) do
 
   create_table "bazes", force: :cascade do |t|
     t.string "title"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_09_02_174937) do
   end
 
   create_table "children", force: :cascade do |t|
-    t.string "fathers_id"
+    t.string "person_id"
     t.string "name"
     t.date "dob"
     t.datetime "created_at", null: false

@@ -15,8 +15,8 @@ class ChildrenTest < ApplicationSystemTestCase
     click_on "New Child"
 
     fill_in "Dob", with: @child.dob
-    fill_in "Fathers", with: @child.fathers_id
     fill_in "Name", with: @child.name
+    fill_in "Person", with: @child.person_id
     click_on "Create Child"
 
     assert_text "Child was successfully created"
@@ -28,8 +28,8 @@ class ChildrenTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Dob", with: @child.dob
-    fill_in "Fathers", with: @child.fathers_id
     fill_in "Name", with: @child.name
+    fill_in "Person", with: @child.person_id
     click_on "Update Child"
 
     assert_text "Child was successfully updated"

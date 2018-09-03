@@ -2,7 +2,7 @@
 
 <p>
   <strong>Bd:</strong>
-  <%= @person.bd.round %>
+  <%= @person.bd %>
 </p>
 
 <p>
@@ -53,7 +53,7 @@
   <br>
   <% end%>
   <% else%>
-  <p>No child yet. Born a new one add </p>
+  <p>No child yet. Born a new one  <%= link_to "add", new_child_path%>  </p>
 
   <% end%>
 

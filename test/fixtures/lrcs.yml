@@ -1,25 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  bd: 9.99
-  rank: MyString
-  name: MyString
-  trade: MyString
-  closed: 2018-08-16
-  issued: 2018-08-16
-  iv_no: 9.99
-  reg_sl: 9.99
-  self: 
-  wife: 9.99
+  person_id: MyString
+  closed: MyString
+  issued: MyString
+  iv_no: MyString
+  reg_sl: MyString
 
 two:
-  bd: 9.99
-  rank: MyString
-  name: MyString
-  trade: MyString
-  closed: 2018-08-16
-  issued: 2018-08-16
-  iv_no: 9.99
-  reg_sl: 9.99
-  self: 
-  wife: 9.99
+  person_id: MyString
+  closed: MyString
+  issued: MyString
+  iv_no: MyString
+  reg_sl: MyString

@@ -17,7 +17,7 @@ class LrcsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create lrc" do
     assert_difference('Lrc.count') do
-      post lrcs_url, params: { lrc: { bd: @lrc.bd, closed: @lrc.closed, issued: @lrc.issued, iv_no: @lrc.iv_no, name: @lrc.name, rank: @lrc.rank, reg_sl: @lrc.reg_sl, self: @lrc.self, trade: @lrc.trade, wife: @lrc.wife } }
+      post lrcs_url, params: { lrc: { closed: @lrc.closed, issued: @lrc.issued, iv_no: @lrc.iv_no, person_id: @lrc.person_id, reg_sl: @lrc.reg_sl } }
     end
 
     assert_redirected_to lrc_url(Lrc.last)
@@ -34,7 +34,7 @@ class LrcsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update lrc" do
-    patch lrc_url(@lrc), params: { lrc: { bd: @lrc.bd, closed: @lrc.closed, issued: @lrc.issued, iv_no: @lrc.iv_no, name: @lrc.name, rank: @lrc.rank, reg_sl: @lrc.reg_sl, self: @lrc.self, trade: @lrc.trade, wife: @lrc.wife } }
+    patch lrc_url(@lrc), params: { lrc: { closed: @lrc.closed, issued: @lrc.issued, iv_no: @lrc.iv_no, person_id: @lrc.person_id, reg_sl: @lrc.reg_sl } }
     assert_redirected_to lrc_url(@lrc)
   end
 

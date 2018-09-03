@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :dob %>
-    <%= form.date_select :dob %>
+    <%= form.text_field :dob, :class => 'dobchild', data: { date_format: 'dd/mm/yyyy' }, placeholder: "dob child" %>
   </div>
 
   <div class="actions">

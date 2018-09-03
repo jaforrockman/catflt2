@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_02_182929) do
+ActiveRecord::Schema.define(version: 2018_09_03_162842) do
 
   create_table "bazes", force: :cascade do |t|
     t.string "title"
@@ -27,22 +27,17 @@ ActiveRecord::Schema.define(version: 2018_09_02_182929) do
   end
 
   create_table "lrcs", force: :cascade do |t|
-    t.decimal "bd"
-    t.string "rank"
-    t.string "name"
-    t.string "trade"
-    t.date "closed"
-    t.date "issued"
-    t.decimal "iv_no"
-    t.decimal "reg_sl"
-    t.decimal "self"
-    t.decimal "wife"
+    t.string "person_id"
+    t.string "closed"
+    t.string "issued"
+    t.string "iv_no"
+    t.string "reg_sl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "people", force: :cascade do |t|
-    t.decimal "bd"
+    t.string "bd"
     t.string "rank"
     t.string "name"
     t.string "trade"

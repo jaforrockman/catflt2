@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :dob %>
-    <%= form.date_select :dob %>
+    <%= form.text_field :dob, :class => 'dobwife', data: { date_format: 'dd/mm/yyyy' }, placeholder: "DOB" %>
   </div>
 
   <div class="field">
     <%= form.label :dom %>
-    <%= form.date_select :dom %>
+    <%= form.text_field :dom, :class => 'domwife', data: { date_format: 'dd/mm/yyyy' }, placeholder: "DOM" %>
   </div>
 
   <div class="actions">

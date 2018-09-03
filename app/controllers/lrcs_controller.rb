@@ -69,6 +69,6 @@ class LrcsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lrc_params
-      params.require(:lrc).permit(:bd, :rank, :name, :trade, :closed, :issued, :iv_no, :reg_sl, :self, :wife)
+      params.require(:lrc).permit(:person_id, :closed, :issued, :iv_no, :reg_sl)
     end
 end

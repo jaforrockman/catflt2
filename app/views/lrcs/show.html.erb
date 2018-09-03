@@ -1,54 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Bd:</strong>
-  <%= @lrc.bd %>
-</p>
+<div>
+  
+  <p align="right">BAF F-20328</p>
+  <br>
+  <h2 align="center"><u> <b>LAST RATION CERTIFICATE</b></u></h2>
+  <br>
+  <p>
+  BD/............<%=Person.find(@lrc.person_id).bd%>.............Rank..........<%=Person.find(@lrc.person_id).rank%>.......... name..............<%=Person.find(@lrc.person_id).name%>............... <br>Branch/Trade..........<%=Trade.find(Person.find(@lrc.person_id).trade).title%>.............. This is to certify that ration card(BAF F-603 A) <br>Sl No ....... ........ in respect of the above named Officer/Airman/MODC/Civilian has been closed wef............<%= @lrc.closed %>.......... and payment issue of ration to his entitlement for the month of.......<%= @lrc.issued %>.......s per existing scale has been made vide IV No ......... <%= @lrc.iv_no %>........ LRC issue register Sl No....... <%= @lrc.reg_sl %>.
+  </p>
 
-<p>
-  <strong>Rank:</strong>
-  <%= @lrc.rank %>
-</p>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Perticulars of his family members are apended below.<br><br>
 
-<p>
-  <strong>Name:</strong>
-  <%= @lrc.name %>
-</p>
+  Self....1.. Wife...<%if Person.find(@lrc.person_id).wife.present?%> 1 <%else%> 0 <%end%>
 
-<p>
-  <strong>Trade:</strong>
-  <%= @lrc.trade %>
-</p>
 
-<p>
-  <strong>Closed:</strong>
-  <%= @lrc.closed %>
-</p>
 
-<p>
-  <strong>Issued:</strong>
-  <%= @lrc.issued.strftime("%Y-%m-%d")  %>
-</p>
 
-<p>
-  <strong>Iv no:</strong>
-  <%= @lrc.iv_no %>
-</p>
 
-<p>
-  <strong>Reg sl:</strong>
-  <%= @lrc.reg_sl %>
-</p>
 
-<p>
-  <strong>Self:</strong>
-  <%= @lrc.self %>
-</p>
 
-<p>
-  <strong>Wife:</strong>
-  <%= @lrc.wife %>
-</p>
-
+<br>
 <%= link_to 'Edit', edit_lrc_path(@lrc) %> |
 <%= link_to 'Back', lrcs_path %>
+</div>
